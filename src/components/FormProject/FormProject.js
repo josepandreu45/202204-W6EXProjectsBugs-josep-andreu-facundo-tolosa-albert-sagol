@@ -42,7 +42,7 @@ const FormProject = ({ id }) => {
       dispatch(addProjectActionCreator(newProject));
     }
 
-    navigate("/projects-list");
+    navigate("/projects");
   };
 
   return (
