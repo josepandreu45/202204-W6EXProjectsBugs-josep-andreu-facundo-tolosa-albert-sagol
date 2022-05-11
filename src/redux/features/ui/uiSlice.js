@@ -11,7 +11,7 @@ const uiSlice = createSlice({
   reducers: {
     setLoadingOn: (ui) => ({ ...ui, loading: true }),
     setLoadingOff: (ui) => ({ ...ui, loading: false }),
-    openModal: (ui, action) => ({ ...ui, modal: ui.modal }),
+    openModal: (ui, action) => ({ ...ui, modal: action.payload }),
     closeModal: (ui) => ({ ...ui, modal: "" }),
     setErrorOn: (ui) => ({ ...ui, error: true }),
     setErrorOff: (ui) => ({ ...ui, error: false }),

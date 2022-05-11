@@ -6,6 +6,10 @@ import {
   addProjectActionCreator,
   updateProjectActionCreator,
 } from "../../redux/features/projects/projectsSlice";
+import {
+  openModalActionCreator,
+  setErrorOffActionCreator,
+} from "../../redux/features/ui/uiSlice";
 
 const FormProject = ({ id }) => {
   const dispatch = useDispatch();
@@ -43,6 +47,8 @@ const FormProject = ({ id }) => {
     }
 
     navigate("/projects");
+    dispatch(setErrorOffActionCreator());
+    dispatch(openModalActionCreator("S'ha afegit l'item del llistat"));
   };
 
   return (
