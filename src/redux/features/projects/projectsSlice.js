@@ -9,7 +9,7 @@ const projectsSlice = createSlice({
     updateProject: (projects, action) =>
       projects.map((project) =>
         project.id === action.payload.id
-          ? { project: action.payload }
+          ? { ...project, name: action.payload.name }
           : { ...project }
       ),
     removeProject: (projects, action) =>
