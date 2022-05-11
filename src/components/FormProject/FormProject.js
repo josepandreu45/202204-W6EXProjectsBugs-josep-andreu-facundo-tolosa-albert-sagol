@@ -39,7 +39,7 @@ const FormProject = ({ id }) => {
         name,
       };
 
-      dispatch(addProjectActionCreator());
+      dispatch(addProjectActionCreator(newProject));
     }
 
     navigate("/projects");

@@ -17,7 +17,7 @@ const Project = ({ project: { id, name } }) => {
 
   return (
     <article className="project">
-      <h3>{name}</h3>
+      <h3>{name ? name : "No Name"}</h3>
       <p>Id: {id}</p>
       <button onClick={editProject}>Edit</button>
       <button onClick={deleteProject}>Delete</button>
