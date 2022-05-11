@@ -29,7 +29,9 @@ export const deleteProjectThunk = (id) => async (dispatch) => {
   dispatch(setLoadingOnActionCreator());
 
   try {
-    const { status } = axios.delete(`${process.env.REACT_APP_API_URL}${id}`);
+    const { status } = await axios.delete(
+      `${process.env.REACT_APP_API_URL}${id}`
+    );
 
     if (status === 200) {
       dispatch(removeProjectActionCreator(id));
